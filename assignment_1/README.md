@@ -1,6 +1,6 @@
 # Assignment 1 - Basic Character Animation
 
-Submission DDL: October 1st 2024 (via [HKU moodle](https://moodle.hku.hk/mod/assign/view.php?id=3460042))
+Submission DDL: Feb 28, 2026 (via [HKU moodle](https://moodle.hku.hk/course/view.php?id=127984))
 
 
 ## Introduction
@@ -35,7 +35,7 @@ Desired results for Task 2 & 3
 ## Task 1 - A rendered video with character animation(40%)
 
 - Download [Blender](https://www.blender.org/download/)
-- Import the [provided mesh](https://github.com/LamWS/COMP7508_Data_Driven_Animation/blob/2024/assignment_1/task1/hm.obj) (feel free to use your mesh if you like)
+- Import the [provided mesh](https://github.com/TimHsue/COMP3360_Data_driven_Computer_Animation/blob/main/assignment_1/task1/hm.obj) (feel free to use your mesh if you like)
 - Define your key joints and skeleton
 - Rigging/Skinning
 - Design keyframes animation (feel free to make use of your creativity to add any objects you like)
@@ -49,8 +49,8 @@ Task 2 & 3 requires Python 3 runtime, and Panda3d will be used for rendering.
 
 ```shell
 # recommend to use Anaconda to manage enviroment 
-conda create -n comp7508 python=3.8
-conda activate comp7508
+conda create -n comp3360 python=3.8
+conda activate comp3360
 conda install numpy scipy
 pip install panda3d
 
@@ -100,7 +100,7 @@ Vector and Rotation
 
 In this task, we will load the data from the BVH file and visualize the skeleton based on two data types - Offset and Rotation. For convenience, almost code modules (file parse, visualization) have been given, and only core implementation needs to be filled.
 
-You are required to implement two functions in (Pls find the code in HKU moodle course page) *[task2_forward_kinematic.py](https://github.com/LamWS/COMP7508_Data_Driven_Animation/blob/2024/assignment_1/task2_forward_kinematic.py "task2_forward_kinematic.py").*
+You are required to implement two functions in  *[task2_forward_kinematic.py](https://github.com/TimHsue/COMP3360_Data_driven_Computer_Animation/blob/main/assignment_1/task2_forward_kinematic.py).*
 
 1. Starting from Line 8, there is a function called *part1_show_T_pose*. We should fill in the code based on the instruction. Then uncomment line 131 and run the script for calling the function. You can see a T-Pose centered with (0, 0, 0).
 2. Starting from Line 45, there is a function called *part2_forward_kinametic*. We should fill in the code based on the instruction. Then uncomment line 134 and run the script for calling the function. You can see a walking motion if show_animation is set to True otherwise a static
