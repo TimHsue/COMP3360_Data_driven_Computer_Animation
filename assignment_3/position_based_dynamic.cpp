@@ -468,7 +468,10 @@ void SpecialKey(GLint key, GLint x, GLint y)
 int main(int argc, char** argv)
 {
 	glutInit(&argc, argv);
+#ifndef __APPLE__
+	// glutSetOption is a freeglut extension not available in Apple's GLUT framework
 	glutSetOption(GLUT_MULTISAMPLE, 16);
+#endif
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH | GLUT_MULTISAMPLE);
 	glutInitWindowSize(window_width, window_height);
 	glutInitWindowPosition(0, 0);
