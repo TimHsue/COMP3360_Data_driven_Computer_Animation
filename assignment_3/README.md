@@ -1,16 +1,16 @@
 # Position-Based-Dynamics Assignment 3
 ## Objective
-Complete the implementation of the `update_cloth_edges` function in `position_based_dynamics.cpp` and document experimental results.
+Complete the implementation of the `update_cloth_edges` function in `position_based_dynamic.cpp` and document experimental results.
 
 ## Implementation Requirements
 
 ### 1. Code Completion
-- **File**: `position_based_dynamics.cpp`
+- **File**: `position_based_dynamic.cpp`
 - **Function**: `update_cloth_edges`
 - **Purpose**: Implement edge constraints for cloth simulation using Position-Based Dynamics
 
 ## Deliverables
-1. **Completed function** in `position_based_dynamics.cpp`
+1. **Completed function** in `position_based_dynamic.cpp`
 2. **Technical report** with experimental findings
 3. **Visual documentation** (screenshots/videos if applicable)
 
@@ -22,7 +22,7 @@ Complete the implementation of the `update_cloth_edges` function in `position_ba
 
 Instructions
 ============
-Support platforms: Windows, Linux 
+Support platforms: Windows, Linux, macOS
 
 ## Dependencies
 
@@ -31,6 +31,43 @@ Support platforms: Windows, Linux
 | eigen3                                 | 3.4.0   | matrix calculation                                  | package        |
 | freeglut                               | 3.4.0   | visualization                                       | package        |
 | glew                                   | 2.2.0#3 | visualization                                       | package        |
+
+### macOS
+
+This project uses **Homebrew** for dependency management and **CMake** for building.
+
+## Prerequisites
+
+- [CMake](https://cmake.org/) installed on your system
+- [Homebrew](https://brew.sh/) installed on your system
+
+## Building the Project
+
+Follow these steps to build and run:
+
+```bash
+# Install dependencies
+brew install eigen glew
+
+# Create and enter build directory
+mkdir build
+cd build
+
+# Configure with CMake (pass Homebrew prefix so CMake finds the packages)
+cmake .. -DCMAKE_PREFIX_PATH=/opt/homebrew
+
+# Build (adjust -j to match your CPU cores)
+make -j$(sysctl -n hw.logicalcpu)
+
+# Run the executable
+./pbd
+```
+
+> **Note:** The project uses Apple's native GLUT framework on macOS instead of
+> freeglut. Homebrew's freeglut requires XQuartz (an X11 display server) and will
+> fail with `"failed to open display ''"` on a standard macOS setup. The
+> `CMakeLists.txt` handles this automatically — do **not** install freeglut via
+> Homebrew.
 
 ### linux
 
